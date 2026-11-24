@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>feeling free</title>
+  <meta name="theme-color" content="#1d3ccf" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="game" tabindex="0"></canvas>
+
+  <div id="loading" class="overlay">
+    <div class="ld-title">feeling free</div>
+    <div class="ld-bar"><i id="ld-fill"></i></div>
+    <div class="ld-note" id="ld-note">raising the city</div>
+  </div>
+
+  <div id="title" class="overlay hidden">
+    <div class="title-inner">
+      <h1>feeling free</h1>
+      <p class="sub">A ride across the meadow to the white city.</p>
+      <button id="start" class="btn">Take the handlebars</button>
+      <div class="keys">
+        <span><kbd>W</kbd> pedal</span>
+        <span><kbd>A</kbd><kbd>D</kbd> steer</span>
+        <span><kbd>Space</kbd> jump</span>
+        <span><kbd>Shift</kbd> sprint</span>
+        <span><kbd>S</kbd> brake</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div class="hud-lanterns" id="hud-lanterns">
+      <span class="lamp"></span>
+      <b id="lcount">0</b><span class="of">/ <span id="ltotal">12</span></span>
+    </div>
+    <div class="hud-compass">
+      <span class="chev" id="chev"></span>
+      <span class="cdist" id="cdist"></span>
+      <span class="clabel" id="clabel">nearest lantern</span>
+    </div>
+    <div class="hud-speed"><b id="kmh">0</b><span>km/h</span></div>
+    <div class="hud-hint" id="hint">
+      <span><kbd>W</kbd> pedal</span><span><kbd>A</kbd><kbd>D</kbd> steer</span><span><kbd>Space</kbd> jump</span>
+      <span><kbd>Shift</kbd> sprint</span><span><kbd>C</kbd> camera</span><span><kbd>M</kbd> sound</span><span><kbd>R</kbd> back to start</span>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <div id="finish" class="overlay hidden">
+    <div class="card">
+      <div class="eyebrow">you made it</div>
+      <h2>the white city</h2>
+      <div class="stats" id="fstats"></div>
+      <button id="again" class="btn">Keep riding</button>
+    </div>
+  </div>
+
+  <div id="pause" class="overlay hidden">
+    <div class="card">
+      <h2>paused</h2>
+      <button id="resume" class="btn">Resume</button>
+    </div>
+  </div>
+
+  <div id="touch" class="hidden">
+    <div id="stick"><i></i></div>
+    <div class="tbtns">
+      <button id="t-jump">jump</button>
+      <button id="t-pedal">pedal</button>
+    </div>
+  </div>
+
+  <div id="err" class="overlay hidden"><div class="card"><h2>couldn't start</h2><p id="errmsg"></p></div></div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
