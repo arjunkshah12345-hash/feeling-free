@@ -4,6 +4,10 @@ An open-world bike ride in the browser. Pedal across a windy meadow of grass and
 
 **Play:** https://arjunkshah12345-hash.github.io/feeling-free/
 
+[![Watch the launch trailer](media/launch-poster.jpg)](media/launch-trailer.mp4)
+
+The [launch trailer](media/launch-trailer.mp4) is real gameplay captured from the game, cut to its own soundtrack.
+
 ## Controls
 
 | Key | Action |
